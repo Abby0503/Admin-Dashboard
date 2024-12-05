@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Dashboard</h2>
+    <ul>
+      <li><a href="#userForm">User/Customer/Seller</a></li>
+      <li><a href="#orderForm">Order</a></li>
+      <li><a href="#inventoryForm">Inventory</a></li>
+      <li><a href="#reportForm">Report</a></li>
+      <li><a href="#feedbackForm">Feedback</a></li>
+      <li><a href="#accountForm">Account Settings</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div id="userForm" class="form-container">
+      <h3>User/Customer/Seller Form</h3>
+      <form onsubmit="handleFormSubmit('user')">
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="orderForm" class="form-container">
+      <h3>Order Form</h3>
+      <form onsubmit="handleFormSubmit('order')">
+        <input type="text" id="orderId" placeholder="Enter Order ID" required>
+        <input type="text" id="orderDetails" placeholder="Enter Order Details" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="inventoryForm" class="form-container">
+      <h3>Inventory Form</h3>
+      <form onsubmit="handleFormSubmit('inventory')">
+        <input type="text" id="itemName" placeholder="Item Name" required>
+        <input type="number" id="quantity" placeholder="Quantity" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="reportForm" class="form-container">
+      <h3>Report Form</h3>
+      <form onsubmit="handleFormSubmit('report')">
+        <textarea id="reportContent" placeholder="Enter Report Content" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="feedbackForm" class="form-container">
+      <h3>Feedback Form</h3>
+      <form onsubmit="handleFormSubmit('feedback')">
+        <textarea id="feedbackContent" placeholder="Enter Feedback" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="accountForm" class="form-container">
+      <h3>Account Settings Form</h3>
+      <form onsubmit="handleFormSubmit('account')">
+        <input type="password" id="newPassword" placeholder="Enter New Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm New Password" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
